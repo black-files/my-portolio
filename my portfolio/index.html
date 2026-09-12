@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rohit | Web Developer</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070707;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND EFFECT
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04), transparent 25%);
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 25px auto;
+
+    padding: 16px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 18px;
+
+    position: sticky;
+    top: 20px;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #ff3b3b;
+}
+
+
+/* NAV LINKS */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* NAV BUTTON */
+
+.nav-btn {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #000;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.hero-small {
+    color: #888;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #777;
+}
+
+
+.hero-text {
+    color: #999;
+
+    max-width: 550px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.primary-btn {
+    background: white;
+
+    color: black;
+
+    font-weight: 600;
+}
+
+
+.secondary-btn {
+    border: 1px solid #333;
+
+    color: white;
+}
+
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CODE CARD
+========================= */
+
+.hero-card {
+    width: 400px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+
+/* CARD TOP */
+
+.card-top {
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding-left: 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.card-top span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #555;
+}
+
+
+/* CODE */
+
+.code-box {
+    padding: 35px;
+
+    font-family: "Space Grotesk", monospace;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #aaa;
+}
+
+
+.code-indent {
+    padding-left: 25px;
+}
+
+
+.code-purple {
+    color: #c084fc;
+}
+
+.code-blue {
+    color: #60a5fa;
+}
+
+.code-green {
+    color: #86efac;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 130px 0;
+}
+
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+
+.section-heading p {
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    max-width: 700px;
+}
+
+
+.section-heading h2 span {
+    color: #777;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 80px;
+}
+
+
+.about-text p {
+    color: #999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.about-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.info-box {
+    padding: 30px;
+
+    border: 1px solid #222;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition: 0.3s;
+}
+
+
+.info-box:hover {
+    border-color: #555;
+
+    transform: translateY(-5px);
+}
+
+
+.info-box h3 {
+    font-size: 35px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    margin-bottom: 10px;
+}
+
+
+.info-box p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section {
+    border-top: 1px solid #151515;
+}
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.skill-card {
+    padding: 35px 25px;
+
+    min-height: 220px;
+
+    border: 1px solid #222;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition: 0.35s;
+}
+
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    transform: translateY(-8px);
+
+    border-color: #555;
+}
+
+
+.skill-number {
+    color: #666;
+
+    font-size: 12px;
+
+    margin-bottom: 45px;
+}
+
+
+.skill-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+
+.skill-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.project-card {
+    border: 1px solid #222;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #0c0c0c;
+
+    transition: 0.35s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #555;
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image {
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.black-files {
+    background:
+        radial-gradient(circle, #3b0000, #090909 65%);
+}
+
+
+.windmill {
+    background:
+        linear-gradient(135deg, #151515, #303030);
+}
+
+
+.spotify {
+    background:
+        linear-gradient(135deg, #101010, #242424);
+}
+
+
+.portfolio-project {
+    background:
+        radial-gradient(circle at center, #252525, #080808);
+}
+
+
+/* PROJECT CONTENT */
+
+.project-content {
+    padding: 30px;
+}
+
+
+.project-type {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.project-content h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+
+.project-content > p:not(.project-type) {
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* PROJECT TAGS */
+
+.project-tags {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+
+.project-tags span {
+    font-size: 11px;
+
+    color: #aaa;
+
+    border: 1px solid #292929;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+}
+
+
+/* PROJECT LINKS */
+
+.project-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.project-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #555;
+
+    padding-bottom: 4px;
+
+    transition: 0.3s;
+}
+
+
+.project-links a:hover {
+    border-color: white;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+    border-top: 1px solid #151515;
+}
+
+
+.services-list {
+    border-top: 1px solid #222;
+}
+
+
+.service {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 40px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px 10px;
+
+    border-bottom: 1px solid #222;
+
+    transition: 0.3s;
+}
+
+
+.service:hover {
+    padding-left: 25px;
+
+    background: rgba(255, 255, 255, 0.02);
+}
+
+
+.service > span {
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+.service h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+
+.service p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.service b {
+    color: #777;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 150px 0;
+
+    text-align: center;
+
+    border-top: 1px solid #151515;
+}
+
+
+.contact-small {
+    color: #666;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-section h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-section h2 span {
+    color: #777;
+}
+
+
+.contact-text {
+    color: #888;
+
+    margin-bottom: 35px;
+
+    line-height: 1.7;
+}
+
+
+.contact-btn {
+    display: inline-block;
+
+    background: white;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+.social-links {
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.social-links a {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.social-links a:hover {
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #151515;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+footer p {
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding-top: 80px;
+    }
+
+    .hero-card {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        width: 94%;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        width: 94%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .section {
+        width: 94%;
+
+        padding: 90px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service {
+        grid-template-columns: 45px 1fr 20px;
+
+        gap: 10px;
+    }
+
+    .service h3 {
+        font-size: 18px;
+    }
+
+    .contact-section {
+        width: 94%;
+
+        padding: 100px 0;
+    }
+
+    .contact-section h2 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    footer {
+        width: 94%;
+
+        flex-direction: column;
+    }
+
+}
+/* JavaScript Scroll Animation */
+
+.section,
+.skill-card,
+.project-card,
+.service,
+.hero-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.7s ease;
+}
+
+.section.show,
+.skill-card.show,
+.project-card.show,
+.service.show,
+.hero-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            R<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-btn">
+            Let's Talk
+        </a>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                HELLO, I'M ROHIT
+            </p>
+
+           <h1>
+               I Build
+              <span id="typing-text">Modern Websites.</span>
+            </h1>
+
+            <p class="hero-text">
+                I'm a frontend web developer who creates modern,
+                responsive and aesthetic websites using HTML, CSS
+                and JavaScript.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="primary-btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="card-top">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="code-box">
+
+                <p>
+                    <span class="code-purple">const</span>
+                    developer =
+                </p>
+
+                <p class="code-indent">
+                    <span class="code-blue">"Rohit"</span>;
+                </p>
+
+                <br>
+
+                <p>
+                    <span class="code-purple">let</span>
+                    skills = [
+                </p>
+
+                <p class="code-indent">
+                    <span class="code-green">"HTML"</span>,
+                </p>
+
+                <p class="code-indent">
+                    <span class="code-green">"CSS"</span>,
+                </p>
+
+                <p class="code-indent">
+                    <span class="code-green">"JavaScript"</span>
+                </p>
+
+                <p>];</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <div class="section-heading">
+
+            <p>01 — ABOUT ME</p>
+
+            <h2>
+                Turning ideas into
+                <span>web experiences.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p>
+                    I'm a passionate web developer who enjoys
+                    creating clean, modern and interactive websites.
+                </p>
+
+                <p>
+                    I love turning simple ideas into beautiful
+                    websites that look good on every screen.
+                </p>
+
+                <p>
+                    Currently, I'm improving my skills in
+                    HTML, CSS and JavaScript while building
+                    real-world projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-info">
+
+                <div class="info-box">
+                    <h3>01</h3>
+                    <p>Creative</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>02</h3>
+                    <p>Responsive</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>03</h3>
+                    <p>Modern</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>04</h3>
+                    <p>Developer</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section skills-section">
+
+        <div class="section-heading">
+
+            <p>02 — MY SKILLS</p>
+
+            <h2>
+                Tools I use to
+                <span>build websites.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-number">01</div>
+                <h3>HTML</h3>
+                <p>
+                    Creating clean and structured
+                    website layouts.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">02</div>
+                <h3>CSS</h3>
+                <p>
+                    Designing modern and responsive
+                    user interfaces.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">03</div>
+                <h3>JavaScript</h3>
+                <p>
+                    Adding interactions and dynamic
+                    website features.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">04</div>
+                <h3>Git & GitHub</h3>
+                <p>
+                    Managing projects and publishing
+                    websites online.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="section">
+
+        <div class="section-heading">
+
+            <p>03 — MY PROJECTS</p>
+
+            <h2>
+                Some things I've
+                <span>built.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-image black-files">
+                    <span>THE BLACK FILES</span>
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        HORROR / MYSTERY WEBSITE
+                    </p>
+
+                    <h3>The Black Files</h3>
+
+                    <p>
+                        A dark mystery website containing
+                        mysterious cases and creepy stories.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-image windmill">
+                    <span>WINDMILL</span>
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        CSS ANIMATION
+                    </p>
+
+                    <h3>Animated Windmill</h3>
+
+                    <p>
+                        A creative animated windmill made
+                        using HTML and CSS.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Animation</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-image spotify">
+                    <span>SPOTIFY</span>
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        MUSIC UI
+                    </p>
+
+                    <h3>Spotify Clone</h3>
+
+                    <p>
+                        A music player interface inspired
+                        by modern music applications.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-image portfolio-project">
+                    <span>PORTFOLIO</span>
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        WEB DEVELOPMENT
+                    </p>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        My personal portfolio website showcasing
+                        my skills and projects.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="section services-section">
+
+        <div class="section-heading">
+
+            <p>04 — SERVICES</p>
+
+            <h2>
+                What I can
+                <span>do for you.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="services-list">
+
+            <div class="service">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Landing Pages</h3>
+                    <p>
+                        Modern landing pages for products,
+                        businesses and personal brands.
+                    </p>
+                </div>
+
+                <b>↗</b>
+
+            </div>
+
+
+            <div class="service">
+
+                <span>02</span>
+
+                <div>
+                    <h3>Portfolio Websites</h3>
+                    <p>
+                        Professional portfolios designed
+                        to showcase your work.
+                    </p>
+                </div>
+
+                <b>↗</b>
+
+            </div>
+
+
+            <div class="service">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Business Websites</h3>
+                    <p>
+                        Clean and responsive websites
+                        for businesses and brands.
+                    </p>
+                </div>
+
+                <b>↗</b>
+
+            </div>
+
+
+            <div class="service">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Website Redesign</h3>
+                    <p>
+                        Improving old websites with
+                        modern designs and layouts.
+                    </p>
+                </div>
+
+                <b>↗</b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <p class="contact-small">
+            05 — GET IN TOUCH
+        </p>
+
+        <h2>
+            Have a project
+            <span>in mind?</span>
+        </h2>
+
+        <p class="contact-text">
+            Let's create something modern,
+            useful and memorable together.
+        </p>
+
+        <a href="rroyx09@gmail.com" class="contact-btn">
+            Let's Work Together ↗
+        </a>
+
+        <div class="social-links">
+
+            <a href="https://github.com/black-files" target="_blank">GitHub</a>
+
+            <a href="@_pvtt.rxhittt" target="_blank">Instagram</a>
+
+            <a href="rroyx09@gmail.com">Email</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Rohit. All rights reserved.
+        </p>
+
+        <p>
+            Designed & Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Page load animation
+window.addEventListener("load", function () {
+
+    document.body.classList.add("loaded");
+
+});
+
+
+// Typing Animation
+const typingText = document.getElementById("typing-text");
+
+const words = [
+    "Modern Websites.",
+    "Creative Websites.",
+    "Aesthetic Websites.",
+    "Professional Websites."
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+
+    const currentWord = words[wordIndex];
+
+    if (deleting) {
+        typingText.textContent = currentWord.substring(0, charIndex);
+        charIndex--;
+    } else {
+        typingText.textContent = currentWord.substring(0, charIndex);
+        charIndex++;
+    }
+
+    let speed = deleting ? 50 : 100;
+
+    if (!deleting && charIndex === currentWord.length + 1) {
+        speed = 1500;
+        deleting = true;
+    }
+
+    if (deleting && charIndex === 0) {
+        deleting = false;
+        wordIndex++;
+
+        if (wordIndex === words.length) {
+            wordIndex = 0;
+        }
+
+        speed = 500;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
+
+// Scroll reveal animation
+const elements = document.querySelectorAll(
+    ".section, .skill-card, .project-card, .service, .hero-card"
+);
+
+const observer = new IntersectionObserver(
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+elements.forEach(function (element) {
+    observer.observe(element);
+});
+
+
+// Navbar background on scroll
+window.addEventListener("scroll", function () {
+
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        navbar.style.background = "rgba(10, 10, 10, 0.85)";
+    } else {
+        navbar.style.background = "rgba(255, 255, 255, 0.035)";
+    }
+
+});
+    </script>
+
+</body>
+
+</html>
+
